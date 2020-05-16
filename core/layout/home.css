@@ -1,0 +1,103 @@
+[top_header] {position: absolute; top: 1rem; left: 0rem; width: 100%; text-align: left; z-index: 2;}
+[top_header] a, [top_header] span {color: white; display: inline-block;}
+[top_header] > a {margin-right: 1rem;} [top_header] > a:hover {opacity: 0.75;}
+[top_header] img {width: 2rem;}
+[top_header] > div {display: inline-block;} [top_header] > div:first-child {margin-left: 1rem;} [top_header] > div:last-child {float: right; margin-right: 1rem;}
+
+/*[slider] {} [slide_group] {} [slide]:nth-of-type(1) {background-image: url("../media/webp/index.webp")}*/
+[slide] {display: none; width: 100%; height: 100%; background: transparent url("") no-repeat fixed center/cover;}
+[slide]:first-child {display: block;}
+a.slide_btn {font-family: "Segoe MDL2 Assets"; color: white; font-size: 2rem; margin: 0rem 0.5rem; transition: ease-in 0.25s;}
+.slide_btn.active, .slide_btn:hover {color: black; cursor: pointer;}
+.directional_nav {top: 50%; width: 100%; transform: translate(0%,-50%);}
+.previous_btn {float: left; margin-left: 1rem;} .next_btn {float: right; margin-right: 1rem;}
+.previous_btn, .next_btn {cursor: pointer; opacity: 0.75; transition: ease-in 0.125s;}
+.previous_btn:hover, .next_btn:hover {opacity: 1; transform: scale(0.85);}
+.previous_btn [mdl2], .next_btn [mdl2] {border-radius: 0.0625rem; font-size: 2rem; color: white; padding: 1rem;}
+[slide] img, [vh] img {position: absolute; object-fit: cover; width: 100%; height: 100%; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+[slide] video, [vh] video {position: absolute; object-fit: cover; min-width: 100%; min-height: 100%; max-height: 125%; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+
+header {overflow: hidden; position: relative;}
+header [slider], header [slide_group] {width: 100%; height: 100%;}
+header .previous_btn, header .next_btn {display: none;}
+header [slide_buttons] {width: 100%; bottom: 6rem;}
+
+header [header-down] {width: 100%; bottom: 1rem; animation: header-down 0.5s ease-out infinite;} header [header-down] a {color: white;}
+@keyframes header-down {0% {transform: scale(1.25);} 75% {transform: scale(1);} 100% {transform: scale(1.25);}}
+
+header a.slide_btn {color: rgba(255,255,255,0.5); font-size: 1.25rem; margin: 0rem 0.5rem; transition: ease-in 0.25s;}
+.slide_btn.active, .slide_btn:hover {color: white; cursor: pointer;}
+header [slider] [center] {z-index: 0;}
+[slide], .directional_nav, header [slider], header [slide_group], header [slide_buttons], header [header-down] {position: absolute;}
+
+header img {height: 50vh;}
+header .slide [btn] {color: black;}
+
+[consultant]
+{
+	position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9997;
+	display: flex; align-items: center; justify-content: center;
+	background: linear-gradient(to right, rgba(222,0,0,0.5), rgba(0,0,0,0.75));	opacity: 0; animation: consultant 1s ease-in forwards;
+}
+[consultant] > div
+{
+	max-width: 90%; max-height: 90%; overflow: hidden; background-color: white; padding: 1.5rem; box-shadow: 0 0.125rem 0.5rem 0 rgba(0,0,0,0.25);
+}
+[consultant] [consultant-close] {float: right; margin-top: -0.375rem; margin-right: -0.375rem;}
+[consultant] > div > span {display: block; margin-top: 3rem; text-transform: uppercase;}
+[consultant] > div > p {margin-top: 3rem; text-align: left;}
+[consultant] a[btn] {margin-top: 3rem;}
+
+@keyframes consultant {100% {opacity: 1;}}
+
+[layout=counter] > div > div > span {text-align: center; display: block; font-family: "Product Sans"; font-size: 1.5rem; font-variant: small-caps; letter-spacing: 0.375rem;}
+[layout=counter] > div > div > div {display: inline-block; width: 7rem; height: 7rem; border-radius: 50%; border: solid 0.25rem white; border-top-width: 0.5rem; border-right-width: 0.75rem;}
+[layout=counter] > div > div > div[animation] {animation: counter 2s ease forwards;}
+[layout=counter] > div > div > div > span {display: block; margin-top: 1.875rem; font-size: 1.5rem;}
+[layout=counter] > div > div > div > span > span {font-size: 1.5rem;}
+[layout=counter] > div > div {display: inline-block; min-width: 49%; max-width: 50%;}
+
+@keyframes counter {
+	0% {color: black; border-bottom-color: white; border-left-color: white; border-top-color: white; border-right-color: white;}
+	25% {color: black; border-bottom-color: white; border-left-color: white; border-top-color: white; border-right-color: white;}
+	50% {color: #E74239; border-bottom-color: white; border-left-color: #E74239; border-top-color: white; border-right-color: white;}
+	75% {color: #FFBD00; border-bottom-color: white; border-left-color: #E74239; border-top-color: #FFBD00; border-right-color: white;}
+	100% {color: #31AD52; border-bottom-color: white; border-left-color: #E74239; border-top-color: #FFBD00; border-right-color: #31AD52;}
+}
+
+main [fill] {background-color: #de0000; padding: 4rem 2rem;}
+main [fill][animation] {animation: fill-logo 0.75s ease-in forwards;}
+@keyframes fill-logo {100% {background-color: black;}}
+main [fill] img {padding: 3rem; transform: scale(0);}
+main [fill] img[animation] {animation: logo 1.5s ease-in forwards;}
+main [fill] div {display: inline-block; background-color: white; border-radius: 50%;}
+@keyframes logo {
+	0% {transform: scale(0) perspective(22.5rem) rotate(0deg);}
+	37.5% {transform: scale(1.25) perspective(22.5rem) rotate(0deg);}
+	50% {transform: scale(1) perspective(22.5rem) rotate(0deg);}
+	60% {transform: scale(1) perspective(22.5rem) rotate(0deg);}
+	100% {transform: scale(1) perspective(22.5rem) rotate(720deg);}
+}
+
+[filter=future] {background-color: rgba(255,255,255,0.25); color: white; border: 0.0625rem solid rgba(255,255,255,0.75); border-radius: 2rem;}
+[filter=toxic] {background: linear-gradient(-135deg, #6ace26, rgba(255,255,255,0.5), #1A73E8); background-size: 250% 250%;	animation: b_c_g 4s ease infinite; color: white;}
+[filter=elegant] {background: linear-gradient(90deg, rgba(15,157,88,0.25), rgba(0,0,0,0), rgba(26,115,232,0.5)); background-size: 500% 500%; animation: b_c_g 8s ease-out infinite; color: white;}
+
+[filter=black] {background-color: rgba(0,0,0,0.5);}
+[filter=blue-25] {background-color: rgba(26,115,232,0.25);}
+[filter=blue-375] {background-color: rgba(26,115,232,0.375);}
+[filter=blue] {background-color: rgba(26,115,232,0.5);}
+[filter=gray] {background-color: rgba(0,0,0,0.03125);}
+[filter=white] {background-color: rgba(255,255,255,0.5);}
+[filter=brown] {background-color: rgba(113,64,14,0.375);}
+[filter=netflix] {background: linear-gradient(to right, rgba(142,14,0,0.375), rgba(31,28,24,0.375));}
+[filter=timber] {background: linear-gradient(to right, rgba(252,0,255,0.375), rgba(0,219,222,0.375));}
+[filter=fresh-turboscent] {background: linear-gradient(to right, rgba(241,242,181,0.375), rgba(19,80,88,0.375));}
+[filter=instagram] {background: linear-gradient(to right, rgba(131,58,180,0.375), rgba(253,29,29,0.375), rgba(252,176,69,0.375));}
+
+[filter=rgb] {
+	background:
+		linear-gradient(217deg, rgba(255,0,0,0.375), rgba(255,0,0,0) 70.71%),
+		linear-gradient(127deg, rgba(0,255,0,0.375), rgba(0,255,0,0) 70.71%),
+		linear-gradient(336deg, rgba(0,0,255,0.375), rgba(0,0,255,0) 70.71%);
+}

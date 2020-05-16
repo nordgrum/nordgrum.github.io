@@ -1,0 +1,6 @@
+[layout=services] article [grid] {grid-gap: 4rem 2rem;} [layout=services] article [grid] h1 {font-size: 2.25rem; }
+[layout=services] article [grid] h2 {font-size: 1.875rem; margin-bottom: 2rem; color: #de0000; text-align: center;}
+[layout=services] article [grid] [h3] {display: inline-block; font-size: 1rem; text-transform: uppercase;}
+[layout=services] article [grid] img {min-width: 16rem;}
+
+[layout=services] article p {margin-top: 2rem; text-align: justify;}

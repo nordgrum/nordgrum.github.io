@@ -1,0 +1,17 @@
+[layout=gallery] {margin-top: 8rem;}
+[grid][layout=gallery] {padding: initial; grid-gap: initial;}
+/*
+[grid][layout=gallery] {grid-gap: 1rem;}
+[layout=gallery] > div {box-shadow: 0.25rem 0.25rem 0.25rem 0rem rgba(0,0,0,0.25); border-radius: 0.125rem; overflow: hidden;}
+*/
+[layout=gallery] > div:hover {z-index: 1;}
+[layout=gallery] > div {position: relative; height: 100%;}
+[layout=gallery] > div [center-c] {pointer-events: none;}
+[layout=gallery] > div img {object-fit: cover; width: 100%; height: 100%;}
+[layout=gallery] > div img, [layout=gallery] > div span {transition: ease 0.375s;}
+[layout=gallery] > div span {transform: scale(0); background-color: rgba(222,0,0,0.75); color: white; padding: 1rem; padding-left: 1.5rem; border-radius: 0.0625rem; letter-spacing: 0.5rem; white-space: nowrap; display: inline-block; font-variant: small-caps;}
+[layout=gallery] > div:hover img {transform: scale(1.125); filter: contrast(110%) brightness(110%) sepia(30%) grayscale(100%);}
+[layout=gallery] > div:hover span {transform: scale(1);}
+[layout=gallery] > [white] span {background-color: rgba(255,255,255,0.75);}
+[layout=gallery] > [black] span {background-color: rgba(16,18,20,0.75);}
+[layout=gallery] > [pink] span {background-color: rgba(249,198,205,0.75);}

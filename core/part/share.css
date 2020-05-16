@@ -1,0 +1,22 @@
+.a2a_dd {outline: none !important;}
+#a2a_overlay {background-color: rgba(0,0,0,0.85) !important; z-index: 1000 !important;}
+.a2a_svg {margin-right: 0.5rem !important; padding: 0.25rem !important; border-radius: 50% !important;}
+.a2a_i, .a2a_localize
+{
+	font-family: "Product Sans Light" !important; letter-spacing: 0.125rem !important; font-size: 1.125rem !important; vertical-align: top !important; line-height: 2rem !important;
+}
+#a2apage_find_icon {top: 0.25rem;}
+.a2a_s_find svg {background-color: transparent !important;}
+.a2a_i {border: none !important; color: white !important;}
+.a2a_i:hover {background-color: rgba(255,255,255,0.25) !important;}
+#a2apage_find {padding: 0.125rem 0rem !important; width: 97% !important; height: auto !important; color: white !important;}
+.a2a_menu span.a2a_s_find svg path {fill: white !important;}
+#a2apage_find_container
+{
+	margin-left: 0.5rem !important; border-radius: 0.125rem !important; border: 0.0625rem solid rgba(255,255,255,0.85) !important;
+}
+#a2apage_full
+{
+	top: 7.5% !important; min-height: 85% !important; background-color: transparent !important; border: none; border-radius: 0 !important;
+}
+#a2apage_dropdown, .a2a_full_footer {display: none !important;}

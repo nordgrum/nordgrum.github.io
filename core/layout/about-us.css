@@ -1,0 +1,21 @@
+[layout=about-us] [pp] {border-radius: 50%; width: 8rem;}
+[layout=about-us] section [grid] div h3 {margin-top: 2rem;}
+[layout=about-us] th {color: #de0000; font-size: 2.5rem; padding: 1rem 0rem; padding-right: 1rem;} [layout=about-us] td {padding: 1.5rem 0;}
+
+[layout=about-us] section p {margin-top: 2rem; text-align: justify;}
+
+[fixed] {position: fixed; top: 50%; left: 50%; width: 100%; z-index: -1000;}
+[fixed] img {filter: opacity(12.25%); animation: fixed-img 60s linear infinite;}
+
+@keyframes fixed-img {
+	0% {transform: translate(-50%,-50%) scale(0); opacity: 0;}
+	2.5% {transform: translate(-50%,-50%) scale(0.125); opacity: 1;}
+	50% {transform: translate(-50%,-50%) scale(2.5); opacity: 1;}
+	97.5% {transform: translate(-50%,-50%) scale(4.875); opacity: 1;}
+	100% {transform: translate(-50%,-50%) scale(5); opacity: 0;}
+}
+
+@media only screen and (max-width: 45rem)/*720*/
+{
+	[fixed] img {animation: none;}
+}
