@@ -4,19 +4,37 @@
 :after, :before, :hover, :focus {outline: initial;}
 
 html {font-family: 'Orbitron', Sans-Serif; text-align: center; scroll-behavior: smooth;}
-body {background-color: white; overflow-x: hidden;}
+body {background-color: white; color: black; overflow-x: hidden;}
 
-header, nav, footer {padding: 2rem; font-size: 0;}
+header, nav, footer {font-size: 0;}
+header, nav {padding: 2rem;}
+footer {padding: 2rem 0; margin: 0 2rem;}
 
 a, span {font-size: 1rem; letter-spacing: 0.125rem;}
 a {color: black; text-decoration: initial;}
-a, a > * {transition: 0.375s ease-in-out;}
+a, a > * {transition: 0.5s ease;}
 a img {width: 1.5rem;}
 
-header {background: linear-gradient(black 50%,transparent 50%);}
-header img {width: 25%; max-width: 100%; border-radius: 50%; border: 0.5rem solid white;}
+iframe {display: none;}
+
+header {background: linear-gradient(black 42.5%,transparent 0%);}
+header img {width: 100%; max-width: 100%; border-radius: 50%; border: 1.5rem solid white;}
 header h1 {font-size: 2rem; font-weight: 900; margin-top: 1.5rem; letter-spacing: 0.2rem; text-transform: uppercase;}
 header span {font-weight: 500; letter-spacing: 0.475rem;}
+
+header > div {overflow: hidden; position: relative; width: 25%; margin: 0 auto;}
+header > div > div {display: inline-block; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(0deg); border: 0.125rem solid transparent; border-radius: 50%;}
+header > div > div:nth-of-type(1) {width: calc(100% - 0.5rem); height: calc(100% - 0.5rem); animation: loader 1.25s linear infinite; border-top-color: black;}
+@keyframes loader {100% {transform: translate(-50%,-50%) rotate(360deg);}}
+
+header > div > div:nth-of-type(2) {width: calc(100% - 1rem); height: calc(100% - 1rem); animation: loader-2 1.25s linear infinite; border-right-color: black;}
+@keyframes loader-2 {100% {transform: translate(-50%,-50%) rotate(-360deg);}}
+
+header > div > div:nth-of-type(3) {width: calc(100% - 1.5rem); height: calc(100% - 1.5rem); animation: loader-3 1.25s linear infinite; border-bottom-color: black;}
+@keyframes loader-3 {100% {transform: translate(-50%,-50%) rotate(360deg);}}
+
+header > div > div:nth-of-type(4) {width: calc(100% - 2rem); height: calc(100% - 2rem); animation: loader-4 1.25s linear infinite; border-left-color: black;}
+@keyframes loader-4 {100% {transform: translate(-50%,-50%) rotate(-360deg);}}
 
 nav h2 {display: inline-block; font-size: 1.5rem; font-weight: 800; letter-spacing: 0.15rem; border-bottom: 0.5rem solid black; padding-bottom: 0.25rem;}
 nav ul {text-align: left; list-style-type: none; margin-top: 2rem;}
@@ -26,11 +44,16 @@ nav a {display: block; background: linear-gradient(to left, black 100%,white 0%)
 nav a img {margin-right: 2rem; filter: invert(1);}
 nav a:hover {background: linear-gradient(to left, black 10%,white 0%); color: black; font-weight: 500;} nav a:hover img {filter: initial;}
 
+footer {border-top: 0.0625rem solid rgba(0,0,0,0.25);}
+footer > a {display: inline-block; background: linear-gradient(90deg, black 100%,white 0%); color: white; width: 16rem; padding: 1rem 1.5rem; border-radius: 4rem; margin-top: 2rem;}
+footer > a:hover {background: linear-gradient(0deg, black 10%,white 0%); color: black; font-weight: 500;}
 footer li {display: inline-block; margin-right: 2rem;}
 footer li:last-of-type {margin-right: initial;}
-footer a {display: inline-block; background: radial-gradient(closest-side, white 0%, black 0%); padding: 0.875rem; border-radius: 50%;}
-footer a img {width: 1.75rem; filter: invert(1);}
-footer a:hover {background: radial-gradient(closest-side, white 90%, black 0%);} footer a:hover img {filter: initial;}
+footer li a {display: inline-block; background: radial-gradient(closest-side, white 0%, black 0%); padding: 0.875rem; border-radius: 50%;}
+footer li a img {width: 1.75rem; filter: invert(1);}
+footer li a:hover {background: radial-gradient(closest-side, white 90%, black 0%);} footer a:hover img {filter: initial;}
 
-@media only screen and (max-width: 720px) {header img {width: 50%;}}
+@media only screen and (max-width: 1280px) {header > div {width: 37.5%;}}
+@media only screen and (max-width: 720px) {header > div {width: 50%;}}
+@media only screen and (max-width: 480px) {header > div {width: 75%;}}
 @media (prefers-color-scheme: dark) {}
