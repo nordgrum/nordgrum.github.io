@@ -1,0 +1,36 @@
+@font-face {font-family: 'Orbitron'; src: url('../../../libs/fonts/Orbitron.ttf');}
+
+* {box-sizing: border-box; vertical-align: top; background-color: initial; border: initial; margin: initial; padding: initial; outline: initial;}
+:after, :before, :hover, :focus {outline: initial;}
+
+html {font-family: 'Orbitron', Sans-Serif; text-align: center; scroll-behavior: smooth;}
+body {background-color: white; overflow-x: hidden;}
+
+header, nav, footer {padding: 2rem; font-size: 0;}
+
+a, span {font-size: 1rem; letter-spacing: 0.125rem;}
+a {color: black; text-decoration: initial;}
+a, a > * {transition: 0.375s ease-in-out;}
+a img {width: 1.5rem;}
+
+header {background: linear-gradient(black 50%,transparent 50%);}
+header img {width: 25%; max-width: 100%; border-radius: 50%; border: 0.5rem solid white;}
+header h1 {font-size: 2rem; font-weight: 900; margin-top: 1.5rem; letter-spacing: 0.2rem; text-transform: uppercase;}
+header span {font-weight: 500; letter-spacing: 0.475rem;}
+
+nav h2 {display: inline-block; font-size: 1.5rem; font-weight: 800; letter-spacing: 0.15rem; border-bottom: 0.5rem solid black; padding-bottom: 0.25rem;}
+nav ul {text-align: left; list-style-type: none; margin-top: 2rem;}
+nav li {margin-bottom: 2rem;}
+nav li:last-of-type {margin-bottom: initial;}
+nav a {display: block; background: linear-gradient(to left, black 100%,white 0%); color: white; padding: 1rem 1.5rem; border-radius: 4rem; line-height: 1.5rem;}
+nav a img {margin-right: 2rem; filter: invert(1);}
+nav a:hover {background: linear-gradient(to left, black 10%,white 0%); color: black; font-weight: 500;} nav a:hover img {filter: initial;}
+
+footer li {display: inline-block; margin-right: 2rem;}
+footer li:last-of-type {margin-right: initial;}
+footer a {display: inline-block; background: radial-gradient(closest-side, white 0%, black 0%); padding: 0.875rem; border-radius: 50%;}
+footer a img {width: 1.75rem; filter: invert(1);}
+footer a:hover {background: radial-gradient(closest-side, white 90%, black 0%);} footer a:hover img {filter: initial;}
+
+@media only screen and (max-width: 720px) {header img {width: 50%;}}
+@media (prefers-color-scheme: dark) {}

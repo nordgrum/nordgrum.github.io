@@ -1,0 +1,24 @@
+.contact {display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-areas:
+	'contact-span contact-span'
+	'contact-span-2 contact-span-3'
+	'contact-ul contact-form';}
+.contact > * {padding: 2rem;}
+
+.contact > span:first-of-type {grid-area: contact-span; background-color: black; color: white; font-weight: 700; font-size: 2rem;}
+.contact > span {font-weight: 700; font-size: 1.5rem;}
+.contact > span:nth-of-type(2), .contact > ul {grid-area: contact-span-2; background-color: #e0e0e0;}
+.contact > span:nth-of-type(3), .contact > form {grid-area: contact-span-3; background-color: #f0f0f0;}
+
+.contact > ul {grid-area: contact-ul; text-align: left;}
+.contact > ul li:first-of-type {margin-top: initial;}
+.contact > ul li {margin-top: 2rem;}
+.contact > ul a span {display: inline-block; padding: 0.5rem 1rem;}
+.contact > ul img {width: 2.5rem;}
+
+.contact > form {grid-area: contact-form; text-align: left;}
+.contact form > * {display: list-item; list-style-type: none; margin: 0 auto;}
+.contact label:first-of-type {margin-top: initial;}
+.contact label {font-weight: 700; margin-top: 2rem;}
+.contact input[type=text], .contact input[type=email], .contact textarea {width: 100%; padding: 1rem; margin-top: 1rem; background-color: white; font-size: 0.875rem; border-left: 0.25rem solid black;}
+.contact [value=Confirm] {margin-top: 2rem;}
+@media only screen and (max-width: 1080px) {.contact {grid-template-columns: auto; grid-template-areas: 'contact-span' 'contact-span-2' 'contact-ul' 'contact-span-3' 'contact-form';}}
