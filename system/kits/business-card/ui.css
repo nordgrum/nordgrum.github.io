@@ -45,8 +45,6 @@ nav a img {margin-right: 2rem; filter: invert(1);}
 nav a:hover {background: linear-gradient(to left, black 10%,white 0%); color: black; font-weight: 500;} nav a:hover img {filter: initial;}
 
 footer {border-top: 0.0625rem solid rgba(0,0,0,0.25);}
-footer > a {display: inline-block; background: linear-gradient(90deg, black 100%,white 0%); color: white; width: 16rem; padding: 1rem 1.5rem; border-radius: 4rem; margin-top: 2rem;}
-footer > a:hover {background: linear-gradient(0deg, black 10%,white 0%); color: black; font-weight: 500;}
 footer li {display: inline-block; margin-right: 2rem;}
 footer li:last-of-type {margin-right: initial;}
 footer li a {display: inline-block; background: radial-gradient(closest-side, white 0%, black 0%); padding: 0.875rem; border-radius: 50%;}
